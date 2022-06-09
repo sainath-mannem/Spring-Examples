@@ -40,9 +40,33 @@ public class AppConfiguration {
 	}
 	
 	@Bean
-	//@Scope("prototype")
+	@Scope("prototype")
 	public Service service(){
 		return new ServiceImpl();
 	}
+	
+	@Bean
+	@Scope("prototype")
+	public Service service(String id){
+		return new ServiceImpl(id);
+	}
+	
+	@Bean
+	@Lazy
+	public Service service1(){
+		return new ServiceImpl("2");
+	}
+	
+	/*@Bean
+	@Scope("prototype")
+	public Service service2(String id){
+		return new ServiceImpl("3");
+	}
+	
+	@Bean
+	@Scope("prototype")
+	public Service service4(String id){
+		return new ServiceImpl("4");
+	}*/
 	
 }

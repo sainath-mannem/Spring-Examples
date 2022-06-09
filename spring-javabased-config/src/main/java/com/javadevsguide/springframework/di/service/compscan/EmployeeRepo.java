@@ -1,4 +1,4 @@
-package com.javadevsguide.springframework.di.service;
+package com.javadevsguide.springframework.di.service.compscan;
 
 import java.util.Arrays;
 import java.util.List;
