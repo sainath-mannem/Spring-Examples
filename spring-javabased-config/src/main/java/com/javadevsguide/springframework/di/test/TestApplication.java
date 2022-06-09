@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import com.javadevsguide.springframework.di.config.AppConfiguration;
 import com.javadevsguide.springframework.di.service.Controller;
+import com.javadevsguide.springframework.di.service.EmployeeController;
 import com.javadevsguide.springframework.di.service.MessageProcessor;
 
 public class TestApplication {
@@ -25,5 +26,7 @@ public class TestApplication {
 		System.out.println(controller2.getService());
 		
 		System.out.println(controller.getIds());
+		
+		System.out.println(applicationContext.getBean(EmployeeController.class).getEmp());
 	}
 }
