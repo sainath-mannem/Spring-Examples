@@ -17,7 +17,8 @@ public class EmployeeService {
 	private EmployeeRepo employeeRepo;
 
 	public Employee save(Employee emp) {
-		return employeeRepo.save(emp);
+		Employee emp2 = employeeRepo.save(emp);
+		return emp2;
 	}
 
 	public Employee get(int empId) {

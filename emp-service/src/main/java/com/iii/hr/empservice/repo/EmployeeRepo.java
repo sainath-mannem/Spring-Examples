@@ -16,7 +16,8 @@ public class EmployeeRepo {
 	Map<Integer, Employee> empData = new HashMap<Integer, Employee>();
 
 	public Employee save(Employee emp) {
-		return empData.put(emp.getId(), emp);
+		empData.put(emp.getId(), emp);
+		return emp;
 	}
 
 	public Employee get(int empId) {

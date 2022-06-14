@@ -1,11 +1,11 @@
-package com.iii.hr.empservice;
+package com.iiii.client.springbootclient;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class EmpServiceApplicationTests {
- 
+class SpringBootClientApplicationTests {
+
 	@Test
 	void contextLoads() {
 	}
