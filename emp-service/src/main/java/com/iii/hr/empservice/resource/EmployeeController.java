@@ -4,6 +4,8 @@ package com.iii.hr.empservice.resource;
 import java.time.LocalDate;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,9 @@ public class EmployeeController {
 
 	@Autowired
 	private EmployeeService employeeService;
+	
+	@Autowired
+	private HttpServletRequest request;
 	
 	@GetMapping("/dummy")
 	public Employee getDummyEmployee() {

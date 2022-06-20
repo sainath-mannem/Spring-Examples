@@ -49,5 +49,26 @@ public class EmployeeService {
 	public Employee delete(int empId) {
 		return employeeRepo.delete(empId);
 	}
+	
+	public double calculateHikePercentage(int empid) {
+		
+		//Toral Exp > 10 && comp > 3 == 30
+		// Total Exp > 10 && comp < 1 == 10
+		// Total Exp > 10 && comp > 1 && comp < 3 == 20
+		// 30
+		int totalExp = employeeRepo.getTotalExp(empid);
+		int currentCompanyExp = employeeRepo.getCurrentCompanyExp(empid);
+		
+		if(totalExp > 10 && currentCompanyExp > 3) {
+			return 30;
+		} else if(totalExp > 10 && currentCompanyExp <1) {
+			return 10;
+		} else if(totalExp > 10 && currentCompanyExp > 1 && currentCompanyExp <3) {
+			return 20;
+		} else {
+			return 30;
+		}
+		
+	}
 
 }
